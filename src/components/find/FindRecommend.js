@@ -27,8 +27,8 @@ const FindRecommend = () => {
                     source={require('../../img/1.jpeg')} 
                     style={{
                         // flex: 1,
-                        width: 392-32,
-                        height: 201,
+                        width: Dimensions.get('window').width-32,
+                        height: 201 * (Dimensions.get('window').width-32)/360 ,
                         borderRadius: 4
                     }}
                     />
@@ -50,8 +50,8 @@ const FindRecommend = () => {
                 <Image 
                     source={require('../../img/1.jpeg')} 
                     style={{
-                        width: 392-32,
-                        height: 201,
+                        width: Dimensions.get('window').width-32,
+                        height: 201 * (Dimensions.get('window').width-32)/360 ,
                         borderRadius: 4
                     }}
                     />
@@ -74,8 +74,8 @@ const FindRecommend = () => {
                     source={require('../../img/1.jpeg')} 
                     style={{
                         // flex: 1,
-                        width: 392-32,
-                        height: 201,
+                        width: Dimensions.get('window').width-32,
+                        height: 201 * (Dimensions.get('window').width-32)/360 ,
                         borderRadius: 4
                     }}
                     />
@@ -98,8 +98,8 @@ const FindRecommend = () => {
                     source={require('../../img/1.jpeg')} 
                     style={{
                         // flex: 1,
-                        width: 392-32,
-                        height: 201,
+                        width: Dimensions.get('window').width-32,
+                        height: 201 * (Dimensions.get('window').width-32)/360 ,
                         borderRadius: 4
                     }}
                     />
@@ -122,8 +122,8 @@ const FindRecommend = () => {
                     source={require('../../img/1.jpeg')} 
                     style={{
                         // flex: 1,
-                        width: 392-32,
-                        height: 201,
+                        width: Dimensions.get('window').width-32,
+                        height: 201 * (Dimensions.get('window').width-32)/360 ,
                         borderRadius: 4
                     }}
                     />

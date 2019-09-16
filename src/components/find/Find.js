@@ -28,8 +28,8 @@ const Find = (props) => {
               <FindTabs tabProps={tabProps}/>
             )}
           >
-            <FindHot />
             <FIndRecommend />
+            <FindHot />
             <FIndRecommend />
           </Tabs>
         </View>
