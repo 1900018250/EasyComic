@@ -21,7 +21,7 @@ const Collection = (props) => {
         {
             img: require('../../img/11.jpeg'),
             title: '鬼灭之刃',
-            progress: '看到29/109话1',
+            progress: '看到29/109话',
             origin: 'bilibili',
 
         },
@@ -125,7 +125,7 @@ Collection.navigationOptions = ({ navigation }) => {
     },
     headerStyle: {
         marginTop: -8,
-        elevation: 2 // 去除阴影
+        elevation: 1 // 去除阴影
     }
  }
 };
@@ -195,7 +195,7 @@ const ContentWarp = styled.View`
     flexDirection: row;
     justifyContent: space-between;
     flexWrap: wrap;
-    marginTop: 0;
+    marginTop: -10;
 `
 
 const ContentBox = styled.View`
