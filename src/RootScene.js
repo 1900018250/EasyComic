@@ -39,11 +39,10 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
 // 底部导航栏配置
 const TabNavigator = createBottomTabNavigator(
     {
-        // 收藏: { screen: CollectionNavigator },
-        最近使用: { screen: Used },
+        // 更多: { screen: More },
         发现: { screen: FindNavigator },
         收藏: { screen: CollectionNavigator },
-        // 最近使用: { screen: Used },
+        最近使用: { screen: Used },
         更多: { screen: More }
     },
     {

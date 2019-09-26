@@ -15,7 +15,8 @@ const App = () => {
             <StatusBar
                 // animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden
                 // hidden={false}  //是否隐藏状态栏。
-                backgroundColor={'#fff'} //状态栏的背景色
+                // backgroundColor={'#fff'} //状态栏的背景色
+                backgroundColor={'#eee'}
                 // barStyle={"default"}
                 barStyle={"dark-content"}
                 // barStyle={'light-content'}

@@ -7,6 +7,9 @@ import LoadImage from '../../widget/LoadImage'
 
 
 const FindRecommend = () => {
+
+    const devWidth = parseInt(Dimensions.get('window').width) - 32    // 图片在当前设备显示的宽度
+    const devHeight = parseInt(201/360 * devWidth)
     const Warp = styled.ScrollView`
         marginVertical: 8;
     `
@@ -22,6 +25,28 @@ const FindRecommend = () => {
         fontWeight: bold;
     `
 
+    const WillLoadTextBox = styled.Text`
+        color: 'rgb(168,168,168)';
+        fontSize: 15;
+        fontWeight: bold;
+    `
+
+    const WillLoadImg = styled.View`
+        width: ${devWidth};
+        height: ${devHeight};
+        backgroundColor: 'rgb(227,227,227)';
+        justifyContent: center;
+        alignItems: center;
+        borderRadius: 4;
+    `
+    const WillLoadText = styled.View`
+        marginTop: 4;
+        width: 220;
+        height: 10;
+        borderRadius: 4;
+        backgroundColor: 'rgb(227,227,227);
+    `
+
     // 为您推荐列表
     const [recommendList, setrecommendList] = useState([{
         uri: '',
@@ -32,8 +57,15 @@ const FindRecommend = () => {
 
     }, [])
 
-    const devWidth = parseInt(Dimensions.get('window').width) - 32    // 图片在当前设备显示的宽度
-    const devHeight = parseInt(201/360 * devWidth)
+    const WillLoad = () => (
+        <Box>
+            <WillLoadImg>
+                <WillLoadTextBox>准备加载</WillLoadTextBox>
+            </WillLoadImg>
+            <WillLoadText></WillLoadText>
+        </Box>
+    )
+    
     
     return (
         <Warp>
@@ -91,6 +123,7 @@ const FindRecommend = () => {
 
                 <Title>小魔头暴露拉！</Title>
             </Box> 
+            <WillLoad />
             <Box>
                 <LoadImage 
                     width={devWidth} 
@@ -100,7 +133,6 @@ const FindRecommend = () => {
 
                 <Title>test test test！</Title>
             </Box> 
-  
         </Warp>
     )
 }
