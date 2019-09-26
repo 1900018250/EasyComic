@@ -1,8 +1,10 @@
 import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 import { Icon } from '@ant-design/react-native'
+// import Ionicons from "react-native-vector-icons/Ionicons"
 
 import  FindNavigator from './components/find/Find'
+import  CollectionNavigator from './components/Collection'
 import  Used from './components/used/Used'
 import  More from './components/more/More'
 
@@ -16,6 +18,7 @@ import  More from './components/more/More'
  */
 const getTabBarIcon = (navigation, focused, tintColor) => {
     const FIND = '发现'
+    const COLLECTION = '收藏'
     const USED = '最近使用'
     const MORE = '更多'
     const { routeName } = navigation.state
@@ -26,6 +29,8 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
         iconName = 'book'
     } else if (routeName === MORE) {
         iconName = 'menu'
+    } else if (routeName === COLLECTION) {
+        iconName = 'heart'
     }
     return <Icon name={iconName} size={24} color={tintColor} />
 }
@@ -34,8 +39,11 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
 // 底部导航栏配置
 const TabNavigator = createBottomTabNavigator(
     {
-        发现: { screen: FindNavigator },
+        // 收藏: { screen: CollectionNavigator },
         最近使用: { screen: Used },
+        发现: { screen: FindNavigator },
+        收藏: { screen: CollectionNavigator },
+        // 最近使用: { screen: Used },
         更多: { screen: More }
     },
     {

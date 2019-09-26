@@ -4,6 +4,7 @@ import { Tabs, Icon  } from '@ant-design/react-native'
 import { createStackNavigator } from 'react-navigation-stack'
 import { List, Popover, Checkbox } from '@ant-design/react-native';
 
+import { COLOR }  from '../../config'
 import FindTabs from './FindTabs'
 import FIndRecommend from './FindRecommend'
 import FindHot from './FindHot'
@@ -20,7 +21,7 @@ const Find = (props) => {
     return (
       <>
         <View style={{ flex: 1, 
-          backgroundColor: 'rgb(250, 250, 250)',
+          backgroundColor: COLOR.BG
         }}>
           <Tabs
             tabs={tabs}
@@ -36,6 +37,8 @@ const Find = (props) => {
       </>
     )
 }
+
+
 const CheckboxItem = Checkbox.CheckboxItem;
 Find.navigationOptions = ({ navigation }) => {
   return {
@@ -48,7 +51,7 @@ Find.navigationOptions = ({ navigation }) => {
             <View style={{paddingHorizontal: 16}}>
                 <Icon 
                     name='search'
-                    color='rgb(78,154,248)'
+                    color={COLOR.MAIN}
                     size={24}
                 />
             </View>
@@ -98,7 +101,8 @@ Find.navigationOptions = ({ navigation }) => {
           >
             <Text
               style={{
-                fontSize: 15,  color:'rgb(78,154,248)'
+                fontSize: 15,  
+                color:COLOR.MAIN
               }}
             >
               来源
@@ -120,7 +124,7 @@ Find.navigationOptions = ({ navigation }) => {
         elevation: 0 // 去除阴影
     }
  }
-};
+}
 
 
 const FindNavigator = createStackNavigator(
